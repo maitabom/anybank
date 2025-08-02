@@ -1,12 +1,11 @@
-import { DatePipe } from '@angular/common';
 import { Component } from '@angular/core';
+import { BannerWelcomeComponent } from '../banner-welcome/banner-welcome.component';
+import { BannerAccountComponent } from '../banner-account/banner-account.component';
 
 @Component({
   selector: 'app-banner',
-  imports: [DatePipe],
+  imports: [BannerWelcomeComponent, BannerAccountComponent],
   templateUrl: './banner.component.html',
-  styleUrl: './banner.component.css'
+  styleUrl: './banner.component.css',
 })
-export class BannerComponent {
-  currentDate = new Date();
-}
+export class BannerComponent {}
