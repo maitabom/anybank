@@ -1,17 +1,22 @@
-import { Component } from '@angular/core';
+import { Component, output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-form-new-transaction',
   imports: [FormsModule],
   templateUrl: './form-new-transaction.component.html',
-  styleUrl: './form-new-transaction.component.css'
+  styleUrl: './form-new-transaction.component.css',
 })
 export class FormNewTransactionComponent {
-  tipoTransacao = "";
-  valorTransacao = "";
+  tipoTransacao = '';
+  valorTransacao = '';
+
+  transacaoCriada = output();
 
   onSubmit() {
-    alert("Enviado");
+    this.transacaoCriada.emit();
+
+    this.tipoTransacao = '';
+    this.valorTransacao = '';
   }
 }

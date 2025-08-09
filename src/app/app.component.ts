@@ -6,8 +6,8 @@ import { FormNewTransactionComponent } from './components/form-new-transaction/f
   selector: 'app-root',
   imports: [BannerComponent, FormNewTransactionComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
 })
 export class AppComponent {
-  title = 'anybank';
+  processarTransacao() {}
 }
