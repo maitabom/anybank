@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { BannerComponent } from './components/banner/banner.component';
 import { FormNewTransactionComponent } from './components/form-new-transaction/form-new-transaction.component';
+import { Transacao } from './models/transacao';
 
 @Component({
   selector: 'app-root',
@@ -9,5 +10,5 @@ import { FormNewTransactionComponent } from './components/form-new-transaction/f
   styleUrl: './app.component.css',
 })
 export class AppComponent {
-  processarTransacao() {}
+  processarTransacao(transacao: Transacao) {}
 }

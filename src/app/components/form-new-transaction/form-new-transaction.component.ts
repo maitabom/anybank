@@ -1,5 +1,7 @@
 import { Component, output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { Transacao } from '../../models/transacao';
+import { TipoTransacao } from '../../models/tipo_transacao';
 
 @Component({
   selector: 'app-form-new-transaction',
@@ -11,10 +13,15 @@ export class FormNewTransactionComponent {
   tipoTransacao = '';
   valorTransacao = '';
 
-  transacaoCriada = output();
+  transacaoCriada = output<Transacao>();
 
   onSubmit() {
-    this.transacaoCriada.emit();
+    const transacao = new Transacao(
+      this.tipoTransacao as TipoTransacao,
+      Number(this.valorTransacao)
+    );
+
+    this.transacaoCriada.emit(transacao);
 
     this.tipoTransacao = '';
     this.valorTransacao = '';
