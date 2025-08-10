@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
 import { BannerWelcomeComponent } from '../banner-welcome/banner-welcome.component';
 import { BannerAccountComponent } from '../banner-account/banner-account.component';
 
@@ -8,4 +8,6 @@ import { BannerAccountComponent } from '../banner-account/banner-account.compone
   templateUrl: './banner.component.html',
   styleUrl: './banner.component.css',
 })
-export class BannerComponent {}
+export class BannerComponent {
+  saldo = input.required<number>()
+}
