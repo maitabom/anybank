@@ -3,10 +3,11 @@ import { BannerComponent } from './components/banner/banner.component';
 import { FormNewTransactionComponent } from './components/form-new-transaction/form-new-transaction.component';
 import { Transacao } from './models/transacao';
 import { TipoTransacao } from './models/tipo_transacao';
+import { ExtratoComponent } from "./components/extrato/extrato.component";
 
 @Component({
   selector: 'app-root',
-  imports: [BannerComponent, FormNewTransactionComponent],
+  imports: [BannerComponent, FormNewTransactionComponent, ExtratoComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
