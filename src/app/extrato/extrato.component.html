@@ -1,0 +1,7 @@
+<div class="extrato-container">
+  <h3>Extrato</h3>
+  <div *ngFor="let transacao of transacoes" class="transacao-item">
+    <!-- Estrutura da transação aqui -->
+    {{ transacao | json }}
+  </div>
+</div>
